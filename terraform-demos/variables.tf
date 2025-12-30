@@ -27,3 +27,8 @@ variable "azure_subscription_id" {
     // 2. export TF_VAR_azure_subscription_id="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   }
 }
+
+variable "azure_tenant_id" {
+  description = "Azure Tenant ID"
+  type        = string
+}

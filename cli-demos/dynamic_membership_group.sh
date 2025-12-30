@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ## Here’s an Azure CLI script that creates an Azure AD (Entra ID) dynamic security group using a membership rule.
 ## Example: Dynamic security group based on user department = "IT"
 
@@ -15,6 +17,8 @@ COMMON_MEMBERSHIP_RULES=[
   '(device.deviceOSType -eq "Windows")', # Device-based dynamic group (example)
 ]
 
+echo "Creating Dynamic security group for IT department users. Group name: $GROUP_NAME"
+
 # Create the dynamic security group
 az ad group create \
   --display-name "$GROUP_NAME" \
@@ -24,9 +28,6 @@ az ad group create \
   --membership-type Dynamic \
   --membership-rule "$MEMBERSHIP_RULE" \
   --membership-rule-processing-state On
-
-
-set -e
 
 # -----------------------------
 # Zero Trust DevOps Group Setup
