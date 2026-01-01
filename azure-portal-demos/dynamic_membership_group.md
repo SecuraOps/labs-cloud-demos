@@ -12,9 +12,9 @@
 
 6. To see the custom extension properties that are available for your membership query:
 
-    a. Select Get custom extension properties.
+    - Select Get custom extension properties.
 
-    b. Enter the application ID, and then select Refresh properties.
+    - Enter the application ID, and then select Refresh properties.
 7. After you finish creating the rule, select Save.
 
 8. On the New group page, select Create to create the group.

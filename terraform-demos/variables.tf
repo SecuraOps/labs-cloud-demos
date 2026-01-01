@@ -32,3 +32,14 @@ variable "azure_tenant_id" {
   description = "Azure Tenant ID"
   type        = string
 }
+
+variable "principal_object_id" {
+  description = "Object ID of the user, group, or service principal to assign RBAC role"
+  type        = string
+}
+
+variable "replication_type" {
+  description = "LRS | ZRS | GRS | GZRS"
+  type = string
+  default = "GZRS"
+}
